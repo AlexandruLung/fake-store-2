@@ -1,0 +1,13 @@
+.backgroundShop {
+  
+    height: 100%;
+    width: 100%;
+    position:absolute
+
+}
+.productsDisplayFlex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

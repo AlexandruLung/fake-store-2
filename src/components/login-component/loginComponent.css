@@ -1,0 +1,14 @@
+.backgroundLogin {
+    background-image: linear-gradient(to top,
+            rgba(87, 29, 2, 0.973),
+            rgba(255, 255, 255, 0.219));
+    height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: fixed;
+
+}

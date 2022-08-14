@@ -1,9 +1,32 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+import { BrowserRouter, MemoryRouter } from "react-router-dom";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test("Landing on a bad page", () => {
+  const badRoute = "/some/bad/route";
+  render(
+    <MemoryRouter initialEntries={[badRoute]}>
+      <App />
+    </MemoryRouter>
+  );
+  expect(screen.getByTestId("404")).toBeInTheDocument();
+});
+test("Landing on login", () => {
+  const login = "/login";
+  render(
+    <MemoryRouter initialEntries={[login]}>
+      <App />
+    </MemoryRouter>
+  );
+  expect(screen.getByTestId("loginComponent")).toBeInTheDocument();
+});
+test("landing on main page", () => {
+  const main = "/";
+  render(
+    <MemoryRouter initialEntries={[main]}>
+      <App />
+    </MemoryRouter>
+  );
+  expect(screen.getByTestId("mainComponent")).toBeInTheDocument();
 });
