@@ -3,7 +3,7 @@ import WelcomePage from "./welcomePageComponent";
 import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
 
-test("Should render main", () => {
+test("Should render welcome page", () => {
   render(
     <BrowserRouter>
       <WelcomePage />

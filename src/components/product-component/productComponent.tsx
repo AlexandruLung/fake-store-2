@@ -44,7 +44,7 @@ function SingleProduct(props: any) {
         <p data-testid="category">
           CATEGORY: {product ? product.category : product}
         </p>
-        <p>RATING: {product.rating ? product.rating.rate : product.rating}</p>
+        <p>RATING: {product?.rating ? product.rating.rate : product?.rating}</p>
       </div>
     </div>
   );

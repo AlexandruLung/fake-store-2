@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import ShopComponent from "./shopComponent";
 import "@testing-library/jest-dom";
 
-test("Should render product component", () => {
+test("Should render product shop component", () => {
   render(
     <BrowserRouter>
       <ShopComponent />

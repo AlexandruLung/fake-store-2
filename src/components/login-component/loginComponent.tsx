@@ -91,13 +91,17 @@ function Login(props: any) {
               <Grid>
                 <Typography color={"error"}>{errorMessage}</Typography>
               </Grid>
+              <br></br>
+
               <Button
                 type="submit"
-                style={{ background: "transparent" }}
+                style={{ background: "transparent", marginLeft: "140px" }}
                 variant="contained"
                 endIcon={<SendIcon style={{ marginRight: "5px" }} />}
                 data-testid="signIn"
-              ></Button>
+              >
+                Sign in
+              </Button>
             </Box>
           </div>
         </Box>

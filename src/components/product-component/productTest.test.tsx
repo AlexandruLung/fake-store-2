@@ -1,9 +1,7 @@
 import { render, screen } from "@testing-library/react";
-
 import ProductPage from "./productPageComponent";
 import "@testing-library/jest-dom";
 import axios from "axios";
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SingleProduct from "./productComponent";
 

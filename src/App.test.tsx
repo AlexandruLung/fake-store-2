@@ -21,7 +21,7 @@ test("Landing on login", () => {
   );
   expect(screen.getByTestId("loginComponent")).toBeInTheDocument();
 });
-test("landing on main page", () => {
+test("Landing on main page", () => {
   const main = "/";
   render(
     <MemoryRouter initialEntries={[main]}>
