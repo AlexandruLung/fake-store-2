@@ -106,7 +106,7 @@ function ShopComponent() {
         <TextField
           data-testid="search"
           id="standard-basic"
-          label="Shearch..."
+          label="Search..."
           variant="standard"
           style={{ width: "500px" }}
           onChange={(e: any) => search(e.target.value, "")}
