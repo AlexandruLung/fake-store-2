@@ -26,7 +26,7 @@ function Header(props: any) {
         <IconButton
           size="medium"
           aria-label=""
-          onClick={toHomePage}
+          onClick={toLogin}
           data-testid="homeIcon"
         >
           <HomeIcon />

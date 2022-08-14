@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router";
 import ProductServices from "../../services/productServices";
+import NotFoundException from "../exception-component/notFoundExceptionComponent";
 import SingleProduct from "./productComponent";
 import "./productPageComponent.css";
 
@@ -10,17 +11,14 @@ function ProductPage(props: any) {
   const [product, setProductsArray] = React.useState([]);
 
   let productService = new ProductServices();
-  const navigate = useNavigate();
 
   const getProducts = async function () {
     try {
       let shop = await productService.getSingleProduct(productId);
       console.log(shop.rating.rate);
-
       setProductsArray(shop);
     } catch (e) {
       setErrorMessage("Data could not load");
-      navigate("/products");
     }
   };
 
@@ -29,8 +27,12 @@ function ProductPage(props: any) {
   }, []);
 
   return (
-    <div className="backgroundProductPage">
-      <SingleProduct product={product} data-testid="SingleProduct" />
+    <div>
+      {!errorMessage ? (
+        <SingleProduct product={product} data-testid="SingleProduct" />
+      ) : (
+        <NotFoundException></NotFoundException>
+      )}
     </div>
   );
 }
