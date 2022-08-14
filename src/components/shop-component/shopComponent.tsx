@@ -114,7 +114,7 @@ function ShopComponent() {
 
         <Select
           data-testid="category"
-          value="title"
+          value={productCategory}
           style={{ marginTop: "15px" }}
           onChange={handleSearchFilter}
         >
